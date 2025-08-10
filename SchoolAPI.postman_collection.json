@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "72bbd03a-4e5e-474e-8263-047cbb4b2a10",
+		"name": "School API",
+		"description": "API for managing school records.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31897755"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Greenwood High\",\r\n  \"address\": \"Sector 5, New Delhi\",\r\n  \"latitude\": 28.6139,\r\n  \"longitude\": 77.2090\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://schoolapi-s9cm.onrender.com/addSchool",
+					"protocol": "https",
+					"host": [
+						"schoolapi-s9cm",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://schoolapi-s9cm.onrender.com/listSchools?latitude=28.6&longitude=77.2",
+					"protocol": "https",
+					"host": [
+						"schoolapi-s9cm",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"listSchools"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "28.6"
+						},
+						{
+							"key": "longitude",
+							"value": "77.2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
